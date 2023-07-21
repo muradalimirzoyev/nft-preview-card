@@ -1,0 +1,179 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+:root {
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan-eth: hsl(178, 100%, 50%);
+    --main-img-grad: hsl(217, 54%, 11%);
+    --main-dark-grad: hsl(216, 50%, 16%);
+    --line-col: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Outfit', 'Times New Roman', sans-serif;
+    font-size: 18px;
+}
+
+main {
+    background-color: var(--main-img-grad);
+    max-width: 400px;
+    min-height: 100vh;
+    margin: auto;
+    padding: 15px;
+}
+
+.container{
+    border-radius: 15px;
+    /* border: 1px solid red; */
+    max-width: 375px;
+    margin: auto;
+    background-color: var(--main-dark-grad);
+    color: var(--white);
+    padding: 20px;
+    margin-top: 20vh;
+}
+
+.equil {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.equil-icon {
+    display: none;
+}
+
+.texxt h1 {
+    margin: 15px 0;
+    font-size: 25px;
+}
+
+.texxt p {
+    color: var(--soft-blue);
+    line-height: 1.2;
+    padding: 0 0 15px 0;
+    letter-spacing: 1px;
+}
+
+.price {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0 10px 0;
+    border-bottom: 1px solid var(--line-col);
+}
+
+.price span:nth-child(2n-1) {
+    color: var(--cyan-eth);
+}
+
+.price img{
+    vertical-align: top;
+    margin-right: 5px;
+}
+
+.author {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.author span{
+    color: var(--soft-blue);
+}
+
+.avatar {
+    border: 1px solid white;
+    border-radius: 50%;
+    width: 50px;
+}
+
+.author p {
+    margin-left: 20px;
+}
+
+
+/* --------Desktop part -------- */
+
+@media (min-width: 1400px) {
+    main {
+        max-width: 100%;
+    }
+    
+    .texxt h1:hover,
+    .author p:hover {
+        cursor: pointer;
+        color: var(--cyan-eth);
+    }
+
+    .equil-icon:hover{
+        top: 45%;
+        right: 45%;
+        display: block;
+        color: var(--cyan-eth);
+    }
+
+    .image::before {
+        content: "";
+        width: 335px;
+        height: 335px;
+        position: absolute;
+        border-radius: 15px;
+        }
+   
+    .image:hover::before{
+        background-color: rgba(32, 232, 254, 0.5);
+        box-shadow: 0 0 5px rgba(81, 203, 238, 0.5);
+    }
+
+}
